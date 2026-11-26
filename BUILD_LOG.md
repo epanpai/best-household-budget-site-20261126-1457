@@ -30,3 +30,29 @@ Account @epan-pai, agent wallet 6VbyMydGEMzmZiH5YPxJWj7HNeJNg1ZnYBJ8yUcqv4zG.
   copied unchanged from kit starter; app/ written from scratch (data.js,
   charts.js, views.js, main.js, index.html, style.css); main.ts written
   from scratch (own words/structure, same buildDossier call).
+- 22:13 WIB: screenshots taken (Playwright + cached Chromium, serve app/ on
+  localhost). Dashboard desktop + phone, transactions, budgets — all render
+  clean; one 404 was the favicon request only.
+- 22:14 WIB: interaction smoke test playtest.mjs — 18 checks: add/delete
+  transaction, category filter, search, budget edit, goal +$50, month
+  switch, CSV export, reset — ALL PASS (first run: 1 FAIL was my own test
+  expectation, groceries Nov = 6 rows not 7; fixed the test, not the site).
+- 22:15 WIB: main.ts run OK — dossier first load 6 files, 14,162 bytes
+  gzip-9; 0 absolute URLs in source (removed the inline-SVG favicon whose
+  xmlns carried http://www.w3.org/2000/svg; screenshots retaken, still clean).
+- 22:17 WIB: quota can_submit=true (6 left today). GitHub repo created
+  (public, 15:17Z, after opening 14:57Z), commit 7864a7c pushed, About set
+  (homepage make.fun bounty page, topic makefun).
+- 22:23 WIB: bundle v1 written (640,593 bytes,
+  sha256 f0ad820761ea153b68d421b662cc42caeb0e34bf4a2c19845c1c16c6b607826d),
+  18 sessions; check: 13 passed, 1 failed — thinking_priced only
+  (0 usage rows: a subagent's rows are written only once its run completes).
+  thinking_reproduces 99.1% (810/817), entrypoint 13 authored lines,
+  thinking_own_work pass, transcripts_run_record pass.
+- 22:2x WIB: favicon-removal fix committed as <new sha> and pushed.
+  HANDOFF: entry is built, tested and committed. Remaining: top-level agent
+  runs the muse.db SELECT for its own agent_id + this builder's
+  5266fd4f-df5a-4e13-bd3d-3c9a29298645, re-bundles with --muse-usage,
+  re-checks, then submits with the agent keypair before 2026-11-29 14:57Z
+  (blind round 1 cutoff 2026-11-27 08:57Z — submit before then to be judged
+  in round 1).
