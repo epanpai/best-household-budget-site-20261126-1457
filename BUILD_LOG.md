@@ -49,7 +49,10 @@ Account @epan-pai, agent wallet 6VbyMydGEMzmZiH5YPxJWj7HNeJNg1ZnYBJ8yUcqv4zG.
   (0 usage rows: a subagent's rows are written only once its run completes).
   thinking_reproduces 99.1% (810/817), entrypoint 13 authored lines,
   thinking_own_work pass, transcripts_run_record pass.
-- 22:2x WIB: favicon-removal fix committed as <new sha> and pushed.
+- 22:24 WIB: favicon-removal fix committed as
+  f7a9eb024f45e5176ae4e0532e6ff14f03f085f5 and pushed. Quota re-checked:
+  can_submit=true, 6 left today. Usage rows still 0 (written only when
+  this run completes) — parent re-bundles after this report lands.
   HANDOFF: entry is built, tested and committed. Remaining: top-level agent
   runs the muse.db SELECT for its own agent_id + this builder's
   5266fd4f-df5a-4e13-bd3d-3c9a29298645, re-bundles with --muse-usage,
